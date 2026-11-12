@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg span {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: white;
+  filter: blur(100px);
+  opacity: 0.3;
+  border-radius: 50%;
+}
+
+.hero-bg span:last-child {
+  background: black;
+  bottom: -150px;
+  right: -150px;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO CONTENT */
+.hero-content {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-img {
+  width: 160px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.hero-content h2 {
+  font-size: 40px;
+}
+
+.hero-content button {
+  padding: 12px 32px;
+  border-radius: 30px;
+  border: none;
+  background: white;
+  color: #764ba2;
+  cursor: pointer;
+}
+
+/* SECTION */
+.section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+}
+
+.glass {
+  background: rgba(255,255,255,0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+/* PROJECT */
+.project-list {
+  display: flex;
+  gap: 16px;
+}
+
+.project-card {
+  flex: 1;
+  padding: 20px;
+  background: rgba(255,255,255,0.25);
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* CERTIFICATE */
+.certificate-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.certificate-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* CONTACT */
+.contact-item a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#contact {
+  margin-bottom: 120px;
+}
+
+/* ANIMATION */
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* TYPING CURSOR */
+#typing-text::after {
+  content: "|";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* SEMBUNYIKAN ASIDE (TAPI ADA DI HTML) */
+aside {
+  display: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .project-list {
+    flex-direction: column;
+  }
+}
+
+article {
+  margin-bottom: 80px;
+}
+
+footer {
+  margin-top: 100px;
+  padding: 40px 20px;
+  text-align: center;
+  opacity: 0.9;
+}
